@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "mauro1234",
+    "database": "node611_development",
+    "host": "138.197.104.91",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "admin",
+    "password": "mauro1234",
+    "database": "node611_test",
+    "host": "138.197.104.91",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "admin",
+    "password": "mauro1234",
+    "database": "node611_production",
+    "host": "138.197.104.91",
+    "dialect": "postgres"
+  }
+}

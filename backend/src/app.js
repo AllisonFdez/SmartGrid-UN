@@ -2,16 +2,19 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
+const db = require('./models')
+const config = require('./config')
 
 const app = express()
 
 app.use(morgan('dev'))
 app.use(bodyParser.json())
-app.use(cors())
-
-require('./routes')(app)
+app.use(bodyParser.urlencoded({extended: false}))
   
-app.listen(8080,()=>{
+require('./routes')(app)
+
+db.sequelize.sync().then(()=>{
+    app.listen(config.port);
 });
 
-console.log('Running')
+console.log(`Api running on port: ${config.port}`)
