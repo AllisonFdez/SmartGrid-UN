@@ -4,16 +4,85 @@ const db = require('../models')
 function getFrequencyPf (req,res) {
     console.log('GET /frequency')
     console.log('This:', req.query)
-    console.log('This is freq:', req.query.freq)
-    console.log('This is pf:', req.query.pf)
     db.shark_frequency_pf.create({
         freq: req.query.freq,
         pf: req.query.pf,
-    }).then((data_frequency_pf) => {
-        res.json(data_frequency_pf);
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getLineVoltagesPhases (req,res) {
+    console.log('GET /line_voltages_phases')
+    console.log('This:', req.query)
+    db.shark_line_voltages_phases.create({
+        vab: req.query.vab,
+        pab: req.query.pab,
+        vbc: req.query.vbc,
+        pbc: req.query.pbc,
+        vca: req.query.vca,
+        pca: req.query.pca,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getCurrentsPhases (req,res) {
+    console.log('GET /currents_phases')
+    console.log('This:', req.query)
+    db.shark_currents_phases.create({
+        ca: req.query.ca,
+        pa: req.query.pa,
+        cb: req.query.cb,
+        pb: req.query.pb,
+        cc: req.query.cc,
+        pc: req.query.pc,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getPhaseVoltages (req,res) {
+    console.log('GET /phase_voltages')
+    console.log('This:', req.query)
+    db.shark_phase_voltages.create({
+        va: req.query.va,
+        vb: req.query.vb,
+        vc: req.query.vc,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getPowers (req,res) {
+    console.log('GET /powers')
+    console.log('This:', req.query)
+    db.shark_powers.create({
+        watt: req.query.watt,
+        var: req.query.var,
+        vas: req.query.vas,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getEnergies (req,res) {
+    console.log('GET /energies')
+    console.log('This:', req.query)
+    db.shark_energies.create({
+        watth: req.query.watth,
+        varh: req.query.varh,
+        vash: req.query.vash,
+    }).then((data) => {
+        res.json(data);
     });
 }
 
 module.exports = {
-    getFrequencyPf
+    getFrequencyPf,
+    getLineVoltagesPhases,
+    getCurrentsPhases,
+    getPhaseVoltages,
+    getPowers,
+    getEnergies
 }
