@@ -78,11 +78,53 @@ function getEnergies (req,res) {
     });
 }
 
+function getVoltageSensors (req,res) {
+    console.log('GET /voltage_sensors')
+    console.log('This:', req.query)
+    db.n611_voltage_sensors.create({
+        voltage1: req.query.voltage1,
+        voltage2: req.query.voltage2,
+        voltage3: req.query.voltage3,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getLowCurrentSensors (req,res) {
+    console.log('GET /low_current_sensors')
+    console.log('This:', req.query)
+    db.n611_lowcurrent_sensors.create({
+        current1: req.query.current1,
+        current2: req.query.current2,
+        current3: req.query.current3,
+        current4: req.query.current4,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getHighCurrentSensors (req,res) {
+    console.log('GET /high_current_sensors')
+    console.log('This:', req.query)
+    db.n611_highcurrent_sensors.create({
+        current5: req.query.current5,
+        current6: req.query.current6,
+        current7: req.query.current7,
+        current8: req.query.current8,
+        current9: req.query.current9,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
 module.exports = {
     getFrequencyPf,
     getLineVoltagesPhases,
     getCurrentsPhases,
     getPhaseVoltages,
     getPowers,
-    getEnergies
+    getEnergies,
+    getVoltageSensors,
+    getLowCurrentSensors,
+    getHighCurrentSensors
 }
