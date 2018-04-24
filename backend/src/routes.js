@@ -20,6 +20,7 @@ module.exports = (app) => {
     //Routes for fetch data from the DB
     app.get('/load_frequency', LoadCtrl.loadFrequencyPf);
     app.get('/load_line_voltages_phases', LoadCtrl.loadLineVoltagesPhases);
+    app.get('/load_currents_phases', LoadCtrl.loadCurrentsPhases);
     app.get('/load_powers', LoadCtrl.loadPowers);
     app.get('/load_energies', LoadCtrl.loadEnergies);
 

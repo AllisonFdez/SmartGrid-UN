@@ -9,6 +9,7 @@ function loadFrequencyPf (req,res) {
         res.json(data).id
     });
 }
+
 function loadLineVoltagesPhases (req,res) {
     console.log('GET /load_line_voltages_phases')
     db.shark_line_voltages_phases.findOne({
@@ -18,8 +19,15 @@ function loadLineVoltagesPhases (req,res) {
     });
 }
 
+function loadCurrentsPhases (req,res) {
+    db.shark_currents_phases.findOne({
+        order: [['id', 'DESC']]
+    }).then((data) => {
+        res.json(data).id
+    });
+}
+
 function loadPowers (req,res) {
-    console.log('GET /load_powers')
     db.shark_powers.findOne({
         order: [['id', 'DESC']]
     }).then((data) => {
@@ -28,7 +36,6 @@ function loadPowers (req,res) {
 }
 
 function loadEnergies (req,res) {
-    console.log('GET /load_energies')
     db.shark_energies.findOne({
         order: [['id', 'DESC']]
     }).then((data) => {
@@ -40,5 +47,6 @@ module.exports = {
     loadFrequencyPf,
     loadLineVoltagesPhases,
     loadPowers,
-    loadEnergies
+    loadEnergies,
+    loadCurrentsPhases
 }
