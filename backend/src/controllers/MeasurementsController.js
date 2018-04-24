@@ -22,7 +22,7 @@ function getLineVoltagesPhases (req,res) {
         pbc: req.query.pbc,
         vca: req.query.vca,
         pca: req.query.pca,
-        create: req.query.createdAt,
+        create: req.query.create,
     }).then((data) => {
         res.json(data);
     });
