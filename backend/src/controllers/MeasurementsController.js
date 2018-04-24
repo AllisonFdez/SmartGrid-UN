@@ -22,6 +22,19 @@ function getLineVoltagesPhases (req,res) {
         pbc: req.query.pbc,
         vca: req.query.vca,
         pca: req.query.pca,
+        create: req.query.createdAt,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
+function getPhaseVoltages (req,res) {
+    console.log('GET /phase_voltages')
+    console.log('This:', req.query)
+    db.shark_phase_voltages.create({
+        va: req.query.va,
+        vb: req.query.vb,
+        vc: req.query.vc,
     }).then((data) => {
         res.json(data);
     });
@@ -37,18 +50,6 @@ function getCurrentsPhases (req,res) {
         pb: req.query.pb,
         cc: req.query.cc,
         pc: req.query.pc,
-    }).then((data) => {
-        res.json(data);
-    });
-}
-
-function getPhaseVoltages (req,res) {
-    console.log('GET /phase_voltages')
-    console.log('This:', req.query)
-    db.shark_phase_voltages.create({
-        va: req.query.va,
-        vb: req.query.vb,
-        vc: req.query.vc,
     }).then((data) => {
         res.json(data);
     });
