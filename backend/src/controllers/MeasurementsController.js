@@ -29,6 +29,18 @@ function getLineVoltagesPhases (req,res) {
     });
 }
 
+function getLineNorVoltages (req,res) {
+    db.shark_line_normalized_voltages.create({
+        vab_n: req.query.vab_n,
+        vbc_n: req.query.vbc_n,
+        vca_n: req.query.vca_n,
+        createdAt: req.query.create,
+        updatedAt: req.query.create,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
 function getPhaseVoltages (req,res) {
     db.shark_phase_voltages.create({
         va: req.query.va,
@@ -80,7 +92,7 @@ function getEnergies (req,res) {
     });
 }
 
-function getVoltageSensors (req,res) {
+function getN611VoltageSensors (req,res) {
     db.n611_voltage_sensors.create({
         voltage1: req.query.voltage1,
         voltage2: req.query.voltage2,
@@ -92,7 +104,7 @@ function getVoltageSensors (req,res) {
     });
 }
 
-function getLowCurrentSensors (req,res) {
+function getN611LowCurrentSensors (req,res) {
     db.n611_lowcurrent_sensors.create({
         current1: req.query.current1,
         current2: req.query.current2,
@@ -105,7 +117,7 @@ function getLowCurrentSensors (req,res) {
     });
 }
 
-function getHighCurrentSensors (req,res) {
+function getN611HighCurrentSensors (req,res) {
     db.n611_highcurrent_sensors.create({
         current5: req.query.current5,
         current6: req.query.current6,
@@ -119,14 +131,28 @@ function getHighCurrentSensors (req,res) {
     });
 }
 
+function getN611Powers (req,res) {
+    db.n611_powers.create({
+        batteries: req.query.batteries,
+        red: req.query.red,
+        panel: req.query.panel,
+        createdAt: req.query.create,
+        updatedAt: req.query.create,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
 module.exports = {
     getFrequencyPf,
     getLineVoltagesPhases,
+    getLineNorVoltages,
     getCurrentsPhases,
     getPhaseVoltages,
     getPowers,
     getEnergies,
-    getVoltageSensors,
-    getLowCurrentSensors,
-    getHighCurrentSensors
+    getN611VoltageSensors,
+    getN611LowCurrentSensors,
+    getN611HighCurrentSensors,
+    getN611Powers
 }

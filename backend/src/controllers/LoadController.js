@@ -10,9 +10,8 @@ function loadFrequencyPf (req,res) {
     });
 }
 
-function loadLineVoltagesPhases (req,res) {
-    console.log('GET /load_line_voltages_phases')
-    db.shark_line_voltages_phases.findOne({
+function loadLineNorVoltages (req,res) {
+    db.shark_line_normalized_voltages.findOne({
         order: [['id', 'DESC']]
     }).then((data) => {
         res.json(data).id
@@ -43,10 +42,19 @@ function loadEnergies (req,res) {
     });
 }
 
+function loadN611Powers (req,res) {
+    db.n611_powers.findOne({
+        order: [['id', 'DESC']]
+    }).then((data) => {
+        res.json(data).id
+    });
+}
+
 module.exports = {
     loadFrequencyPf,
-    loadLineVoltagesPhases,
+    loadLineNorVoltages,
     loadPowers,
     loadEnergies,
-    loadCurrentsPhases
+    loadCurrentsPhases,
+    loadN611Powers
 }
