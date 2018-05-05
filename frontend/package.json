@@ -15,8 +15,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "highcharts": "^6.1.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-highcharts": "0.0.10",
+    "vue-router": "^3.0.1",
+    "vue-spinner": "^1.0.3",
+    "vue2-highcharts": "^1.1.9",
+    "vuetify": "^1.0.17"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
