@@ -12,12 +12,13 @@
         <v-dialog v-model="dialog611" fullscreen transition="dialog-bottom-transition" :overlay="false">
          <v-card class="n611" slot="activator"></v-card>
          <v-card>
-           <v-toolbar dark color="primary">
+           <v-toolbar dark color="bg-navy" height="60px">
              <v-btn icon @click.native="dialog611 = false" dark>
                <v-icon>close</v-icon>
              </v-btn>
              <v-toolbar-title>Node 611 Dashboard</v-toolbar-title>
            </v-toolbar>
+           <node611 />
           </v-card>
         </v-dialog>
     </v-card>
@@ -26,9 +27,11 @@
 
 <script>
 import Node650 from '../components/Node650.vue'
+import Node611 from '../components/Node611.vue'
 export default {
   components: {
-    Node650
+    Node650,
+    Node611
   },
   data () {
     return {

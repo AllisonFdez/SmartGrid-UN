@@ -24,7 +24,7 @@
         </p>
       </div>
     </div>
-    <div class="col-md-2 col-sm-8 col-xs-12">
+    <div class="col-md-3 col-sm-8 col-xs-12">
        <div class="content-all">
         <p class="text-center">
 
