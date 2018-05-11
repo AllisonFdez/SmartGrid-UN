@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .red220 {
   position: absolute;
-  background-color: red;
+  background-color: transparent;
   top: 50px;
   bottom: 0;
   right: 0;
@@ -57,7 +57,7 @@ export default {
 }
 .n650 {
   position: absolute;
-  background-color: yellow;
+  background-color: transparent;
   top: 45px;
   bottom: 0;
   right: 0;
@@ -68,7 +68,7 @@ export default {
 }
 .n611 {
   position: absolute;
-  background-color: green;
+  background-color: transparent;
   top: 555px;
   bottom: 0;
   right: 0;
