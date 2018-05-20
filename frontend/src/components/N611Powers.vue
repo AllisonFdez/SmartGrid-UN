@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     getN611Powers: function () {
-      axios.get('http://localhost:8080/load_node_powers').then(response => {
+      axios.get('http://104.236.0.105:8080/load_node_powers').then(response => {
         this.N611Powers = response.data
         console.log('N611Powers', this.N611Powers)
       })
