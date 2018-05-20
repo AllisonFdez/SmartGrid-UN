@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getControl: function () {
-      axios.get('http://localhost:8080/load_control').then(response => {
+      axios.get('http://104.236.0.105:8080/load_control').then(response => {
         this.control = response.data
       })
     }
