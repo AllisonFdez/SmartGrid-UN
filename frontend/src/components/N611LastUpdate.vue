@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     getLastUpdate: function () {
-      axios.get('http://localhost:8080/load_node_powers').then(response => {
+      axios.get('http://104.236.0.105:8080/load_node_powers').then(response => {
         this.LastDay = response.data.createdAt.slice(0, 10)
         this.LastHour = response.data.createdAt.slice(11, 19)
         console.log('N611Powers', this.LastUpdate)
