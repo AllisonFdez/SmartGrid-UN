@@ -5,7 +5,6 @@
        <v-toolbar-title class="title">Smart grid IEEE13</v-toolbar-title>
        <v-spacer></v-spacer>
        <v-btn icon class="icon-tool">
-         <v-icon>apps</v-icon>
        </v-btn>
       </v-toolbar>
       <main>
@@ -26,7 +25,7 @@ export default {
 <style>
 .icon-tool {
   margin-top: 0px;
-  -moz-box-align: center;
+  -moz-box-align: center
 }
 .title {
   margin-top: 0px;
