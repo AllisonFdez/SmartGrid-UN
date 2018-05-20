@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getCurrentsPhases: function () {
-      axios.get('http://localhost:8080/load_currents_phases').then(response => {
+      axios.get('http://104.236.0.105:8080/load_currents_phases').then(response => {
         this.options.series[0].data = [0, response.data.ca]
         this.options.series[0].pointStart = (-1) * response.data.pa - 1
         this.options.series[1].data = [0, response.data.cb]
