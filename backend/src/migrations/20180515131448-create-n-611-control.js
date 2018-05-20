@@ -1,21 +1,15 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('shark_energies', {
+    return queryInterface.createTable('n611_controls', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      watth: {
-        type: Sequelize.FLOAT
-      },
-      varh: {
-        type: Sequelize.FLOAT
-      },
-      vash: {
-        type: Sequelize.FLOAT
+      state: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +22,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('shark_energies');
+    return queryInterface.dropTable('n611_controls');
   }
 };

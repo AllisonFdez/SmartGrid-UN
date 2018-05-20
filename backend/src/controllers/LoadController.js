@@ -50,11 +50,20 @@ function loadN611Powers (req,res) {
     });
 }
 
+function loadN611Control (req,res) {
+    db.n611_control.findOne({
+        order: [['id', 'DESC']]
+    }).then((data) => {
+        res.json(data).id
+    });
+}
+
 module.exports = {
     loadFrequencyPf,
     loadLineNorVoltages,
     loadPowers,
     loadEnergies,
     loadCurrentsPhases,
-    loadN611Powers
+    loadN611Powers,
+    loadN611Control
 }

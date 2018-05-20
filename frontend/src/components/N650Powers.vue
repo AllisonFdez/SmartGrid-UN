@@ -9,15 +9,15 @@
   <div class="info-box-text">
     <div class="info-box-content-report">
       <span class="info-box-icon-data bg-2"><b>P</b></span>
-      <span class="info-box-number"> {{ powers.watt }} <span class="info-box-units">kW</span></span>
+      <span class="info-box-number"> {{ powers.watt }} <span class="info-box-units">W</span></span>
     </div>
     <div class="info-box-content-report">
       <span class="info-box-icon-data bg-3"><b>S</b></span>
-      <span class="info-box-number"> {{ powers.vas }} <span class="info-box-units">kVA</span></span>
+      <span class="info-box-number"> {{ powers.vas }} <span class="info-box-units">VA</span></span>
     </div>
     <div class="info-box-content-report">
       <span class="info-box-icon-data bg-4"><b>Q</b></span>
-      <span class="info-box-number"> {{ powers.var }} <span class="info-box-units">kVAR</span></span>
+      <span class="info-box-number"> {{ powers.var }} <span class="info-box-units">VAR</span></span>
     </div>
   </div>
 </div>

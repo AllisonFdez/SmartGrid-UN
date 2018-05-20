@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
     batteries: DataTypes.FLOAT
   }, {});
   n611_powers.associate = function(models) {
-    // associations can be defined here
   };
   return n611_powers;
 };

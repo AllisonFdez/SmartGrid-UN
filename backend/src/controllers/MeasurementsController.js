@@ -2,8 +2,6 @@
 const db = require('../models')
 
 function getFrequencyPf (req,res) {
-    console.log('GET /frequency')
-    console.log('This:', req.query)
     db.shark_frequency_pf.create({
         freq: req.query.freq,
         pf: req.query.pf,
@@ -143,6 +141,16 @@ function getN611Powers (req,res) {
     });
 }
 
+function getN611Control (req,res) {
+    db.n611_control.create({
+        state: req.query.state,
+        createdAt: req.query.create,
+        updatedAt: req.query.create,
+    }).then((data) => {
+        res.json(data);
+    });
+}
+
 module.exports = {
     getFrequencyPf,
     getLineVoltagesPhases,
@@ -154,5 +162,6 @@ module.exports = {
     getN611VoltageSensors,
     getN611LowCurrentSensors,
     getN611HighCurrentSensors,
-    getN611Powers
+    getN611Powers,
+    getN611Control
 }

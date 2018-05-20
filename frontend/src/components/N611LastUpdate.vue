@@ -20,6 +20,7 @@ export default {
   },
   mounted () {
     this.getLastUpdate()
+    setInterval(this.getLastUpdate, 60000)
   },
   data () {
     return {
