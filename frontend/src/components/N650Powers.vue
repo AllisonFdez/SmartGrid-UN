@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     getPowers: function () {
-      axios.get('http://localhost:8080/load_powers').then(response => {
+      axios.get('http://104.236.0.105:8080/load_powers').then(response => {
         this.powers = response.data
       })
     }
