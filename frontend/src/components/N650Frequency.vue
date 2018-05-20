@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getFrequency: function () {
-      axios.get('http://localhost:8080/load_frequency').then(response => {
+      axios.get('http://104.236.0.105:8080/load_frequency').then(response => {
         this.frequency = response.data
         console.log('Frequency', this.frequency)
       })
