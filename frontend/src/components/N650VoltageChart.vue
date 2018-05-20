@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getLineVoltagesAndPhasesNor: function () {
-      axios.get('http://localhost:8080/load_line_voltages_nor').then(response => {
+      axios.get('http://104.236.0.105:8080/load_line_voltages_nor').then(response => {
         this.options.series[0].data = [0.9, response.data.vab_n]
         this.options.series[1].data = [0.9, response.data.vbc_n]
         this.options.series[2].data = [0.9, response.data.vca_n]
