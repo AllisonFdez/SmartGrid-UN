@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getEnergies: function () {
-      axios.get('http://localhost:8080/load_energies').then(response => {
+      axios.get('http://104.236.0.105:8080/load_energies').then(response => {
         this.energies = response.data
       })
     }
