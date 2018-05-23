@@ -3,7 +3,7 @@
     <span class="info-box-icon bg-navy">
       <scale-loader :loading='true' color='#ffffff' height='25px' width='4px' margin='2px'></scale-loader>
     </span>
-    <span class="info-box-freq">{{ frequency.freq }}</span>
+    <span class="info-box-freq"><b>{{ frequency.freq }}</b></span>
     <span class="info-box-pf">Φ Pf: {{ frequency.pf }}</span>
   </div>
 </template>

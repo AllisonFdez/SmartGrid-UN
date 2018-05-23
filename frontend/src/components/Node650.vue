@@ -70,7 +70,7 @@ export default {
 .info-box {
   cursor: pointer;
   min-height:89px;
-  width: 80%;
+  width: 90%;
   align-content: center
 }
 .info-box-content {
